@@ -22,9 +22,8 @@ export default {
     }
   },
   methods: {
-    selector (user) {
-      this.selected = user
-      this.$emit('selectedItem', user)
+    selector (option) {
+      this.$emit('selectedItem', option)
     }
   },
   computed: {

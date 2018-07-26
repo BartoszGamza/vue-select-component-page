@@ -5,7 +5,9 @@
     </div>
     <div class="cardPopup">
       <div v-if="show" class="elements" v-for="option in options" :key="option.id" @click="selector(option)">
-        {{option}}
+        <div class="cardPopupInner">
+          {{option}}
+        </div>
       </div>
     </div>
   </div>
@@ -65,7 +67,6 @@ export default {
 .cardPopup {
   position: relative;
   left: 0;
-  padding-left: 25px;
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
@@ -75,5 +76,9 @@ export default {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   background-color: white;
   cursor: pointer;
+}
+.cardPopupInner {
+  padding: 5px 0px 5px 0px;
+  margin: 0px 25px 0px 25px;
 }
 </style>
